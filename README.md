@@ -990,36 +990,6 @@ python3 generate_test_pcap.py
 | Application Breakdown | Traffic classification results |
 | Detected SNIs | Actual domain names found |
 
----
-
-## 12. Extending the Project
-
-### Ideas for Improvement
-
-1. **Add More App Signatures**
-   ```cpp
-   // In types.cpp
-   if (sni.find("twitch") != std::string::npos)
-       return AppType::TWITCH;
-   ```
-
-2. **Add Bandwidth Throttling**
-   ```cpp
-   // Instead of DROP, delay packets
-   if (shouldThrottle(flow)) {
-       std::this_thread::sleep_for(10ms);
-   }
-   ```
-
-3. **Add Live Statistics Dashboard**
-   ```cpp
-   // Separate thread printing stats every second
-   void statsThread() {
-       while (running) {
-           printStats();
-           sleep(1);
-       }
-   }
    ```
 
 4. **Add QUIC/HTTP3 Support**
@@ -1046,8 +1016,7 @@ The key insight is that even HTTPS traffic leaks the destination domain in the T
 
 ---
 
-## Questions?
 
 
 
-reword and make more crisp also remove extending the project part
+
