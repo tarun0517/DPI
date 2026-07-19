@@ -992,16 +992,6 @@ python3 generate_test_pcap.py
 
    ```
 
-4. **Add QUIC/HTTP3 Support**
-   - QUIC uses UDP on port 443
-   - SNI is in the Initial packet (encrypted differently)
-
-5. **Add Persistent Rules**
-   - Save rules to file
-   - Load on startup
-
----
-
 ## Summary
 
 This DPI engine demonstrates:
